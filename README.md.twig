@@ -1,0 +1,63 @@
+# Docker image for building PHP based applications
+Docker images for building PHP (and other) web applications. Ideal for use with deploy.dog, or in build/CI environments.
+
+**This is currently a work in progress and so we do not recommending using it yet.**
+
+## Image contents
+* PHP (many versions, see below)
+* Node.js (version 6 (LTS) or 8 (Latest), see below)
+* npm
+* Composer
+* Grunt
+* Gulp
+* SASS (also covers SCSS)
+* LESS
+* webpack
+* Browserify
+* Yarn
+* Bower
+
+## PHP Extensions included
+* pdo_mysql
+* curl
+* intl
+* gd
+* json
+* mbstring
+* zip
+* xml
+* soap
+* bcmath
+* apc/apcu
+* bz2
+* mcrypt
+
+## Versions
+We support recent many versions of PHP, each with the latest LTS version of Node.js and the latest stable version of Node.js. Simply tell docker (or [deploy.dog](https://deploy.dog)) the version of the image that you want.
+
+### Looking for the latest patch release of a PHP version?
+| PHP Version  | Node.js Version | Docker Image Version |
+| ------------ | --------------- | -------------------- |
+{% for php in basePhpVersions %}
+{% for nodejs in nodejsVersions %}
+| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+{% endfor %}
+{% endfor %}
+
+### Looking for a specific patch release of a stable PHP version?
+| PHP Version  | Node.js Version | Docker Image Version |
+| ------------ | --------------- | -------------------- |
+{% for php in stablePhpVersions %}
+{% for nodejs in nodejsVersions %}
+| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+{% endfor %}
+{% endfor %}
+
+### Looking for a specific patch release of a QA PHP version?
+| PHP Version  | Node.js Version | Docker Image Version |
+| ------------ | --------------- | -------------------- |
+{% for php in qaPhpVersions %}
+{% for nodejs in nodejsVersions %}
+| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+{% endfor %}
+{% endfor %}
