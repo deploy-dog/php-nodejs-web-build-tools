@@ -44,8 +44,6 @@ We support recent many versions of PHP, each with the latest LTS version of Node
 | PHP 7.0 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.0/nodejs8` |
 | PHP 7.1 | Node.js 6 | `deploydog/php-nodejs-web-build-tools:php7.1/nodejs6` |
 | PHP 7.1 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.1/nodejs8` |
-| PHP 7.2 | Node.js 6 | `deploydog/php-nodejs-web-build-tools:php7.2/nodejs6` |
-| PHP 7.2 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.2/nodejs8` |
 
 ### Looking for a specific patch release of a stable PHP version?
 | PHP Version  | Node.js Version | Full Docker Image Name |
@@ -192,7 +190,5 @@ We support recent many versions of PHP, each with the latest LTS version of Node
 | PHP 7.0.24 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.0.24/nodejs8` |
 | PHP 7.1.10 | Node.js 6 | `deploydog/php-nodejs-web-build-tools:php7.1.10/nodejs6` |
 | PHP 7.1.10 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.1.10/nodejs8` |
-| PHP 7.2.0 | Node.js 6 | `deploydog/php-nodejs-web-build-tools:php7.2.0/nodejs6` |
-| PHP 7.2.0 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.2.0/nodejs8` |
 
-Last updated Thu 7th Sep 2017 12:00pm
+Last updated Thu 7th Sep 2017 12:07pm
