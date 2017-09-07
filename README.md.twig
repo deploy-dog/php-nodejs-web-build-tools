@@ -36,28 +36,30 @@ Docker images for building PHP (and other) web applications. Ideal for use with 
 We support recent many versions of PHP, each with the latest LTS version of Node.js and the latest stable version of Node.js. Simply tell docker (or [deploy.dog](https://deploy.dog)) the version of the image that you want.
 
 ### Looking for the latest patch release of a PHP version?
-| PHP Version  | Node.js Version | Docker Image Version |
-| ------------ | --------------- | -------------------- |
+| PHP Version  | Node.js Version | Full Docker Image Name |
+| ------------ | --------------- | ---------------------- |
 {% for php in basePhpVersions %}
 {% for nodejs in nodejsVersions %}
-| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+| PHP {{ php }} | Node.js {{ nodejs }} | `deploydog/php-nodejs-web-build-tools:php{{ php }}/nodejs{{ nodejs }}` |
 {% endfor %}
 {% endfor %}
 
 ### Looking for a specific patch release of a stable PHP version?
-| PHP Version  | Node.js Version | Docker Image Version |
-| ------------ | --------------- | -------------------- |
+| PHP Version  | Node.js Version | Full Docker Image Name |
+| ------------ | --------------- | ---------------------- |
 {% for php in stablePhpVersions %}
 {% for nodejs in nodejsVersions %}
-| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+| PHP {{ php }} | Node.js {{ nodejs }} | `deploydog/php-nodejs-web-build-tools:php{{ php }}/nodejs{{ nodejs }}` |
 {% endfor %}
 {% endfor %}
 
 ### Looking for a specific patch release of a QA PHP version?
-| PHP Version  | Node.js Version | Docker Image Version |
-| ------------ | --------------- | -------------------- |
+| PHP Version  | Node.js Version | Full Docker Image Name |
+| ------------ | --------------- | ---------------------- |
 {% for php in qaPhpVersions %}
 {% for nodejs in nodejsVersions %}
-| PHP {{ php }} | Node.js {{ nodejs }} | `php{{ php }}/nodejs{{ nodejs }}` |
+| PHP {{ php }} | Node.js {{ nodejs }} | `deploydog/php-nodejs-web-build-tools:php{{ php }}/nodejs{{ nodejs }}` |
 {% endfor %}
 {% endfor %}
+
+Last updated {{ time|date('D jS M Y g:ia') }}

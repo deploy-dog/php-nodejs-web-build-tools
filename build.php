@@ -6,7 +6,7 @@ require_once __DIR__.'/vendor/autoload.php';
 use GuzzleHttp\Client;
 
 // START of Config
-$basePhpVersions = ['5.6', '7.0', '7.1', '7.2']; // Only add MAJOR.MINOR
+$basePhpVersions = ['5.6', '7.0', '7.1']; // Only add MAJOR.MINOR
 $nodejsVersions = ['6', '8'];
 // END of Config
 
@@ -100,11 +100,14 @@ foreach ($basePhpVersions as $phpVersion) {
 
 // Generate README.md file
 if ($newDockerfilesCreated > 0) {
+    runCommand('git checkout master');
+
     $readmeContents = $twig->render('README.md.twig', [
         'basePhpVersions' => $basePhpVersions,
         'nodejsVersions' => $nodejsVersions,
         'stablePhpVersions' => $stablePhpVersions,
         'qaPhpVersions' => $qaPhpVersions,
+        'time' => time(),
     ]);
     file_put_contents(__DIR__.'/README.md', $readmeContents);
 
