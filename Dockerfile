@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:5.6.18
 MAINTAINER deploy.dog
 RUN apt-get update -yqq && \
 apt-get install -yqq git zip curl libicu-dev libcurl4-openssl-dev libfreetype6-dev libgd-dev libmcrypt-dev libjpeg62-turbo-dev libpng12-dev libbz2-dev php-pear mysql-client libxml2-dev build-essential \
