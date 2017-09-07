@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.0.5
 MAINTAINER deploy.dog
 RUN apt-get update -yqq && \
 apt-get install -yqq git zip curl libicu-dev libcurl4-openssl-dev libfreetype6-dev libgd-dev libmcrypt-dev libjpeg62-turbo-dev libpng12-dev libbz2-dev php-pear mysql-client libxml2-dev build-essential \
@@ -47,7 +47,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 
 # Install Node.JS and show version
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -yqq nodejs
 RUN nodejs --version
 RUN npm --version
