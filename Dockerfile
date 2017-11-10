@@ -20,11 +20,8 @@ RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install bz2
 RUN docker-php-ext-install mcrypt
 
-RUN pecl install apcu-5.1.8
+RUN pecl install apcu-4.0.11
 RUN docker-php-ext-enable apcu
-RUN pecl install apcu_bc-1.0.3
-RUN docker-php-ext-enable apc
-RUN rm -f /usr/local/etc/php/conf.d/docker-php-ext-apc.ini
 RUN rm -f /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 
 # Copy in APC config
