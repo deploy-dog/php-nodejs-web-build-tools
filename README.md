@@ -195,4 +195,4 @@ We support recent many versions of PHP, each with the latest LTS version of Node
 | PHP 7.2.0 | Node.js 6 | `deploydog/php-nodejs-web-build-tools:php7.2.0/nodejs6` |
 | PHP 7.2.0 | Node.js 8 | `deploydog/php-nodejs-web-build-tools:php7.2.0/nodejs8` |
 
-Last updated Thu 7th Sep 2017 12:00pm
+Last updated Thu 7th Sep 2017 12:00pm.
